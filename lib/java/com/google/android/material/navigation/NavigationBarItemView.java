@@ -248,7 +248,7 @@ public abstract class NavigationBarItemView extends FrameLayout implements MenuV
     switch (labelVisibilityMode) {
       case NavigationBarView.LABEL_VISIBILITY_UNSELECTED:
         if (!checked) {
-          setViewLayoutParams(icon, defaultMargin, Gravity.CENTER_HORIZONTAL | Gravity.TOP);
+          setViewLayoutParams(icon, defaultMargin - 4, Gravity.CENTER_HORIZONTAL | Gravity.TOP);
           updateViewPaddingBottom(
               labelGroup, (int) labelGroup.getTag(R.id.mtrl_view_tag_bottom_padding));
           largeLabel.setVisibility(VISIBLE);

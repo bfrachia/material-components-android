@@ -36,6 +36,8 @@
       <enum name="labeled" value="1"/>
       <!-- Label is not shown on any navigation items. -->
       <enum name="unlabeled" value="2"/>
+
+      <enum name="unselected" value="3"/>
     </attr>
     <!-- The background for the navigation items. Attribute type definition is in navigation
          package. -->

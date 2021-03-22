@@ -39,7 +39,8 @@ import java.lang.annotation.RetentionPolicy;
   LabelVisibilityMode.LABEL_VISIBILITY_AUTO,
   LabelVisibilityMode.LABEL_VISIBILITY_SELECTED,
   LabelVisibilityMode.LABEL_VISIBILITY_LABELED,
-  LabelVisibilityMode.LABEL_VISIBILITY_UNLABELED
+  LabelVisibilityMode.LABEL_VISIBILITY_UNLABELED,
+  LabelVisibilityMode.LABEL_VISIBILITY_UNSELECTED
 })
 @Retention(RetentionPolicy.SOURCE)
 @Deprecated
@@ -58,4 +59,6 @@ public @interface LabelVisibilityMode {
 
   /** Label is not shown on any navigation items. */
   int LABEL_VISIBILITY_UNLABELED = BottomNavigationView.LABEL_VISIBILITY_UNLABELED;
+
+  int LABEL_VISIBILITY_UNSELECTED = BottomNavigationView.LABEL_VISIBILITY_UNSELECTED;
 }

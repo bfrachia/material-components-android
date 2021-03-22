@@ -246,6 +246,19 @@ public abstract class NavigationBarItemView extends FrameLayout implements MenuV
     smallLabel.setPivotY(smallLabel.getBaseline());
 
     switch (labelVisibilityMode) {
+      case NavigationBarView.LABEL_VISIBILITY_UNSELECTED:
+        if (!checked) {
+          setViewLayoutParams(icon, defaultMargin, Gravity.CENTER_HORIZONTAL | Gravity.TOP);
+          updateViewPaddingBottom(
+              labelGroup, (int) labelGroup.getTag(R.id.mtrl_view_tag_bottom_padding));
+          largeLabel.setVisibility(VISIBLE);
+        } else {
+          setViewLayoutParams(icon, defaultMargin, Gravity.CENTER);
+          updateViewPaddingBottom(labelGroup, 0);
+          largeLabel.setVisibility(INVISIBLE);
+        }
+        smallLabel.setVisibility(INVISIBLE);
+        break;
       case NavigationBarView.LABEL_VISIBILITY_AUTO:
         if (isShifting) {
           if (checked) {

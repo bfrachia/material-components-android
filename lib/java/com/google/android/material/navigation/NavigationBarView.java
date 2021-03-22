@@ -96,6 +96,8 @@ public abstract class NavigationBarView extends FrameLayout {
   /** Label is not shown on any navigation items. */
   public static final int LABEL_VISIBILITY_UNLABELED = 2;
 
+  public static final int LABEL_VISIBILITY_UNSELECTED = 3;
+
   /**
    * Menu Label visibility mode enum for component provide an implementation of navigation bar view.
    *
@@ -117,7 +119,8 @@ public abstract class NavigationBarView extends FrameLayout {
         LABEL_VISIBILITY_AUTO,
         LABEL_VISIBILITY_SELECTED,
         LABEL_VISIBILITY_LABELED,
-        LABEL_VISIBILITY_UNLABELED
+        LABEL_VISIBILITY_UNLABELED,
+        LABEL_VISIBILITY_UNSELECTED
       })
   @Retention(RetentionPolicy.SOURCE)
   public @interface LabelVisibility {}
